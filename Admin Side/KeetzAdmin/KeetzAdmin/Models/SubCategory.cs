@@ -14,11 +14,6 @@ namespace KeetzAdmin.Models
     
     public partial class SubCategory
     {
-        public SubCategory()
-        {
-            this.Products = new HashSet<Product>();
-        }
-    
         public int SubCategoryID { get; set; }
         public int CategoryID { get; set; }
         public string Name { get; set; }
@@ -28,6 +23,5 @@ namespace KeetzAdmin.Models
         public Nullable<bool> isActive { get; set; }
     
         public virtual Category Category { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
     }
 }

@@ -17,7 +17,6 @@ namespace KeetzAdmin.Models
         public Category()
         {
             this.genPromoRights = new HashSet<genPromoRight>();
-            this.Products = new HashSet<Product>();
             this.SubCategories = new HashSet<SubCategory>();
         }
     
@@ -29,7 +28,6 @@ namespace KeetzAdmin.Models
         public Nullable<bool> isActive { get; set; }
     
         public virtual ICollection<genPromoRight> genPromoRights { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<SubCategory> SubCategories { get; set; }
     }
 }

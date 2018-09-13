@@ -14,11 +14,6 @@ namespace KeetzAdmin.Models
     
     public partial class Supplier
     {
-        public Supplier()
-        {
-            this.Products = new HashSet<Product>();
-        }
-    
         public int SupplierID { get; set; }
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
@@ -30,7 +25,5 @@ namespace KeetzAdmin.Models
         public string Email { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-    
-        public virtual ICollection<Product> Products { get; set; }
     }
 }

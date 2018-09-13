@@ -48,11 +48,9 @@ namespace KeetzAdmin.Models
         public string Picture3 { get; set; }
         public string Picture4 { get; set; }
         public string Note { get; set; }
+        public Nullable<bool> isVisible { get; set; }
     
-        public virtual Category Category { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
-        public virtual SubCategory SubCategory { get; set; }
-        public virtual Supplier Supplier { get; set; }
         public virtual ICollection<RecentlyView> RecentlyViews { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
         public virtual ICollection<Wishlist> Wishlists { get; set; }

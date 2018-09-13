@@ -179,6 +179,7 @@
     <Property Name="Picture3" Type="varchar" MaxLength="500" />
     <Property Name="Picture4" Type="varchar" MaxLength="500" />
     <Property Name="Note" Type="varchar" MaxLength="250" />
+    <Property Name="isVisible" Type="bit" />
   </EntityType>
   <EntityType Name="RecentlyViews">
     <Key>
@@ -371,42 +372,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Products_Categories">
-    <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
-    <End Role="Products" Type="Self.Products" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Categories">
-        <PropertyRef Name="CategoryID" />
-      </Principal>
-      <Dependent Role="Products">
-        <PropertyRef Name="CategoryID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Products_SubCategory">
-    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
-    <End Role="Products" Type="Self.Products" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="SubCategory">
-        <PropertyRef Name="SubCategoryID" />
-      </Principal>
-      <Dependent Role="Products">
-        <PropertyRef Name="SubCategoryID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Products_Suppliers">
-    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="1" />
-    <End Role="Products" Type="Self.Products" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Suppliers">
-        <PropertyRef Name="SupplierID" />
-      </Principal>
-      <Dependent Role="Products">
-        <PropertyRef Name="SupplierID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_RecentlyViews_Customers">
     <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
     <End Role="RecentlyViews" Type="Self.RecentlyViews" Multiplicity="*" />
@@ -545,18 +510,6 @@
     <AssociationSet Name="FK_Payment_PaymentType" Association="Self.FK_Payment_PaymentType">
       <End Role="PaymentType" EntitySet="PaymentType" />
       <End Role="Payment" EntitySet="Payment" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
-      <End Role="Categories" EntitySet="Categories" />
-      <End Role="Products" EntitySet="Products" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Products_SubCategory" Association="Self.FK_Products_SubCategory">
-      <End Role="SubCategory" EntitySet="SubCategory" />
-      <End Role="Products" EntitySet="Products" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Products_Suppliers" Association="Self.FK_Products_Suppliers">
-      <End Role="Suppliers" EntitySet="Suppliers" />
-      <End Role="Products" EntitySet="Products" />
     </AssociationSet>
     <AssociationSet Name="FK_RecentlyViews_Customers" Association="Self.FK_RecentlyViews_Customers">
       <End Role="Customers" EntitySet="Customers" />
