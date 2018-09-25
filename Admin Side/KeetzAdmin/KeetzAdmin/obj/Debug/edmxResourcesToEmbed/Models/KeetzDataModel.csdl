@@ -42,6 +42,7 @@
     <Property Name="Picture2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Name="isActive" Type="Boolean" />
     <NavigationProperty Name="genPromoRights" Relationship="Self.FK_genPromoRight_Categories" FromRole="Categories" ToRole="genPromoRight" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
     <NavigationProperty Name="SubCategories" Relationship="Self.FK_SubCategory_Categories" FromRole="Categories" ToRole="SubCategory" />
   </EntityType>
   <EntityType Name="Customer">
@@ -198,8 +199,10 @@
     <Property Name="Picture3" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Picture4" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-    <Property Name="isVisible" Type="Boolean" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
     <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetails_Products" FromRole="Products" ToRole="OrderDetails" />
+    <NavigationProperty Name="SubCategory" Relationship="Self.FK_Products_SubCategory" FromRole="Products" ToRole="SubCategory" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_Products_Suppliers" FromRole="Products" ToRole="Suppliers" />
     <NavigationProperty Name="RecentlyViews" Relationship="Self.FK_RecentlyViews_Products" FromRole="Products" ToRole="RecentlyViews" />
     <NavigationProperty Name="Reviews" Relationship="Self.FK_Review_Products" FromRole="Products" ToRole="Review" />
     <NavigationProperty Name="Wishlists" Relationship="Self.FK_Wishlist_Products" FromRole="Products" ToRole="Wishlist" />
@@ -268,6 +271,7 @@
     <Property Name="Picture2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="isActive" Type="Boolean" />
     <NavigationProperty Name="Category" Relationship="Self.FK_SubCategory_Categories" FromRole="SubCategory" ToRole="Categories" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_SubCategory" FromRole="SubCategory" ToRole="Products" />
   </EntityType>
   <EntityType Name="Supplier">
     <Key>
@@ -284,6 +288,7 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Country" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Suppliers" FromRole="Suppliers" ToRole="Products" />
   </EntityType>
   <EntityType Name="Wishlist">
     <Key>
@@ -328,6 +333,18 @@
         <PropertyRef Name="CategoryID" />
       </Principal>
       <Dependent Role="genPromoRight">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Categories">
+    <End Role="Categories" Type="Self.Category" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
         <PropertyRef Name="CategoryID" />
       </Dependent>
     </ReferentialConstraint>
@@ -452,6 +469,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Products_SubCategory">
+    <End Role="SubCategory" Type="Self.SubCategory" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategory">
+        <PropertyRef Name="SubCategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="SubCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Suppliers">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_RecentlyViews_Products">
     <End Role="Products" Type="Self.Product" Multiplicity="1" />
     <End Role="RecentlyViews" Type="Self.RecentlyView" Multiplicity="*" />
@@ -519,6 +560,10 @@
       <End Role="Categories" EntitySet="Categories" />
       <End Role="genPromoRight" EntitySet="genPromoRights" />
     </AssociationSet>
+    <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
     <AssociationSet Name="FK_SubCategory_Categories" Association="Self.FK_SubCategory_Categories">
       <End Role="Categories" EntitySet="Categories" />
       <End Role="SubCategory" EntitySet="SubCategories" />
@@ -558,6 +603,14 @@
     <AssociationSet Name="FK_Payment_PaymentType" Association="Self.FK_Payment_PaymentType">
       <End Role="PaymentType" EntitySet="PaymentTypes" />
       <End Role="Payment" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_SubCategory" Association="Self.FK_Products_SubCategory">
+      <End Role="SubCategory" EntitySet="SubCategories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Suppliers" Association="Self.FK_Products_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Products" EntitySet="Products" />
     </AssociationSet>
     <AssociationSet Name="FK_RecentlyViews_Products" Association="Self.FK_RecentlyViews_Products">
       <End Role="Products" EntitySet="Products" />

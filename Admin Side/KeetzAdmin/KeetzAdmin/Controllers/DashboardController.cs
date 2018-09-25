@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using KeetzAdmin.Models;
-using System.Data.Objects;
+using System.Data;
+using System.Data.Entity.Core.Objects;
 
 namespace KeetzAdmin.Controllers
 {

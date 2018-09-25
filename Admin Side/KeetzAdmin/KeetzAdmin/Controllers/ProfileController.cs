@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using KeetzAdmin.Models;
 using System.Data;
+using System.Data.Entity;
 
 namespace KeetzAdmin.Controllers
 {

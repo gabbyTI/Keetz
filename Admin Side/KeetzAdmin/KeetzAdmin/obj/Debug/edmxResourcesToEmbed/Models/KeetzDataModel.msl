@@ -188,7 +188,6 @@
           <ScalarProperty Name="Picture3" ColumnName="Picture3" />
           <ScalarProperty Name="Picture4" ColumnName="Picture4" />
           <ScalarProperty Name="Note" ColumnName="Note" />
-          <ScalarProperty Name="isVisible" ColumnName="isVisible" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

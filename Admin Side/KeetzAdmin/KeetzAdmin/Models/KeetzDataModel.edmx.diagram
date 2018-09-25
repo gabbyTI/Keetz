@@ -4,28 +4,29 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b40a29c2703441f4a4e65449c374a435" Name="Diagram1">
-        <EntityTypeShape EntityType="KeetzModel.admin_Employee" Width="1.5" PointX="8.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.admin_Login" Width="1.5" PointX="11" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Category" Width="1.5" PointX="8.75" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Customer" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.genMainSlider" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.genPromoRight" Width="1.5" PointX="11" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Order" Width="1.5" PointX="0.75" PointY="21.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.OrderDetail" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Payment" Width="1.5" PointX="1.5" PointY="27.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.PaymentType" Width="1.5" PointX="1.5" PointY="31.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Product" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.RecentlyView" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Review" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Role" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.ShippingDetail" Width="1.5" PointX="1.5" PointY="34.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.SubCategory" Width="1.5" PointX="11" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Supplier" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.Wishlist" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+      <Diagram DiagramId="97f9ed9d9938456ba7c1e0ef5c9aa2a2" Name="Diagram1">
+        <EntityTypeShape EntityType="KeetzModel.admin_Employee" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.admin_Login" Width="1.5" PointX="10" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Category" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Customer" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.genMainSlider" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.genPromoRight" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Order" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.OrderDetail" Width="1.5" PointX="7.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Payment" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.PaymentType" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Product" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.RecentlyView" Width="1.5" PointX="10.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Review" Width="1.5" PointX="7.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Role" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.ShippingDetail" Width="1.5" PointX="3" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.SubCategory" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Supplier" Width="1.5" PointX="3" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.Wishlist" Width="1.5" PointX="10.5" PointY="12.5" IsExpanded="true" />
         <AssociationConnector Association="KeetzModel.FK_admin_Login_admin_Employee" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_admin_Login_Roles" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_genPromoRight_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="KeetzModel.FK_Products_Categories" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_SubCategory_Categories" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_Order_Customers" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_RecentlyViews_Customers" ManuallyRouted="false" />
@@ -36,6 +37,8 @@
         <AssociationConnector Association="KeetzModel.FK_OrderDetails_Order" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_OrderDetails_Products" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_Payment_PaymentType" ManuallyRouted="false" />
+        <AssociationConnector Association="KeetzModel.FK_Products_SubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="KeetzModel.FK_Products_Suppliers" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_RecentlyViews_Products" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_Review_Products" ManuallyRouted="false" />
         <AssociationConnector Association="KeetzModel.FK_Wishlist_Products" ManuallyRouted="false" />

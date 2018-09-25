@@ -150,7 +150,7 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="@(ViewBag.Title=="Dashboard" ? "active" : "")" >
+                    <li class="@(ViewBag.Title=="Dashboard" ? "active" : "")">
                         <a href="@Url.Action("Index", "Dashboard")"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li class="@(ViewBag.Title == "Order" ? "active" : "")">
@@ -169,22 +169,22 @@
                         <a href="@Url.Action("Index", "Employee")"><i class="fa fa-fw fa-user"></i>Employee</a>
                     </li>
                     @*<li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>*@
-                    
+            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="demo" class="collapse">
+                <li>
+                    <a href="#">Dropdown Item</a>
+                </li>
+                <li>
+                    <a href="#">Dropdown Item</a>
+                </li>
+            </ul>
+        </li>*@
+
                     <li class="@(ViewBag.Title == "Settings" ? "active" : "")">
                         <a href="@Url.Action("Index", "Settings")"><i class="fa fa-fw fa-gear"></i>Settings</a>
                     </li>
                     <li class="@(ViewBag.Title == "Logout" ? "active" : "")">
-                        <a href="@Url.Action("Logout", "Login")"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                        <a href="@Url.Action("Logout", "admin_Login")"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
                     </li>
                 </ul>
             </div>

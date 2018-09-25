@@ -58,3 +58,5 @@ C:\Users\Gabriel\Documents\Keetz\Admin Side\KeetzAdmin\KeetzAdmin\obj\Debug\Keet
 C:\Users\Gabriel\Documents\Keetz\Admin Side\KeetzAdmin\KeetzAdmin\obj\Debug\KeetzAdmin.csproj.CopyComplete
 C:\Users\Gabriel\Documents\Keetz\Admin Side\KeetzAdmin\KeetzAdmin\obj\Debug\KeetzAdmin.dll
 C:\Users\Gabriel\Documents\Keetz\Admin Side\KeetzAdmin\KeetzAdmin\obj\Debug\KeetzAdmin.pdb
+C:\Users\Gabriel\Documents\Keetz\Admin Side\KeetzAdmin\KeetzAdmin\bin\EntityFramework.SqlServer.dll
+C:\Users\Gabriel\Documents\Keetz\Admin Side\KeetzAdmin\KeetzAdmin\bin\EntityFramework.SqlServer.xml
