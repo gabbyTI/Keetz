@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="da779901b46547369e0f24920bc00b17" Name="Diagram1">
+      <Diagram DiagramId="c270aaaebbb748dfa8ae771f1cb5b656" Name="Diagram1">
         <EntityTypeShape EntityType="KeetzModel.admin_Employee" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="KeetzModel.admin_Login" Width="1.5" PointX="10" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="KeetzModel.Category" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
         <EntityTypeShape EntityType="KeetzModel.Customer" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KeetzModel.genMainSlider" Width="1.5" PointX="1.75" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KeetzModel.genMainSlider" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KeetzModel.genPromoRight" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="KeetzModel.Order" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
         <EntityTypeShape EntityType="KeetzModel.OrderDetail" Width="1.5" PointX="7.5" PointY="15" IsExpanded="true" />
